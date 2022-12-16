@@ -33,6 +33,7 @@ AppBar topNavigationBar(BuildContext context, GlobalKey<ScaffoldState> key) =>
               text: "Stampede Client",
               color: light,
               size: 20,
+              weight: FontWeight.w100,
             ),
           ),
           Expanded(child: Container()),

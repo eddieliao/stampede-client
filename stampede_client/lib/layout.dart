@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:stampede_client/helpers/responsiveness.dart';
 import 'package:stampede_client/widgets/large_screen.dart';
+import 'package:stampede_client/widgets/side_menu.dart';
 import 'package:stampede_client/widgets/small_screen.dart';
 import 'package:stampede_client/widgets/top_nav.dart';
 
@@ -11,8 +12,11 @@ class SiteLayout extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      key: scaffoldKey,
       appBar: topNavigationBar(context, scaffoldKey),
-      drawer: const Drawer(),
+      drawer: const Drawer(
+        child: SideMenu(),
+      ),
       body: const ResponsiveWidget(
         largeScreen: LargeScreen(),
         smallScreen: SmallScreen(),

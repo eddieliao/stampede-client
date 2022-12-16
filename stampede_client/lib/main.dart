@@ -1,9 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:get/get_navigation/get_navigation.dart';
+import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:stampede_client/controllers/menu_controller.dart';
+import 'package:stampede_client/controllers/navigation_controller.dart';
 import 'package:stampede_client/layout.dart';
 
 void main() {
+  Get.put(MenuController());
+  Get.put(NavigationController());
   runApp(const MyApp());
 }
 
@@ -17,7 +21,7 @@ class MyApp extends StatelessWidget {
       title: "Stampede Client",
       theme: ThemeData(
         scaffoldBackgroundColor: Colors.black,
-        textTheme: GoogleFonts.robotoTextTheme(Theme.of(context).textTheme)
+        textTheme: GoogleFonts.montserratTextTheme(Theme.of(context).textTheme)
             .apply(bodyColor: Colors.white),
         pageTransitionsTheme: const PageTransitionsTheme(builders: {
           TargetPlatform.iOS: FadeUpwardsPageTransitionsBuilder(),
