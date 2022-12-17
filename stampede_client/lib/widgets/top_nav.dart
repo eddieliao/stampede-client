@@ -10,7 +10,7 @@ AppBar topNavigationBar(BuildContext context, GlobalKey<ScaffoldState> key) =>
           ? Row(
               children: [
                 Container(
-                  padding: const EdgeInsets.only(left: 14),
+                  padding: const EdgeInsets.only(left: 14, bottom: 5),
                   child: Image.asset(
                     "assets/icons/logo.png",
                     width: 28,
@@ -20,7 +20,10 @@ AppBar topNavigationBar(BuildContext context, GlobalKey<ScaffoldState> key) =>
               ],
             )
           : IconButton(
-              icon: const Icon(Icons.menu),
+              icon: const Icon(
+                Icons.menu,
+                color: Colors.white,
+              ),
               onPressed: () {
                 key.currentState!.openDrawer();
               },
@@ -33,10 +36,25 @@ AppBar topNavigationBar(BuildContext context, GlobalKey<ScaffoldState> key) =>
               text: "Stampede Client",
               color: light,
               size: 20,
-              weight: FontWeight.w100,
+              weight: FontWeight.normal,
             ),
           ),
           Expanded(child: Container()),
+          IconButton(
+              icon: Icon(
+                Icons.settings,
+                color: light,
+              ),
+              padding: const EdgeInsets.only(left: 15, right: 15),
+              onPressed: () {}),
+          Container(
+            width: 1,
+            height: 22,
+            color: light,
+          ),
+          const SizedBox(
+            width: 15,
+          ),
           CustomText(
             text: "Standard",
             color: light,
@@ -47,5 +65,5 @@ AppBar topNavigationBar(BuildContext context, GlobalKey<ScaffoldState> key) =>
         ],
       ),
       iconTheme: IconThemeData(color: light),
-      backgroundColor: background,
+      backgroundColor: topbar,
     );

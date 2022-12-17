@@ -14,7 +14,7 @@ class SideMenu extends StatelessWidget {
   Widget build(BuildContext context) {
     double width = MediaQuery.of(context).size.width;
     return Container(
-      color: background,
+      color: sidebar,
       child: ListView(children: [
         if (ResponsiveWidget.isSmallScreen(context))
           Column(
@@ -27,7 +27,7 @@ class SideMenu extends StatelessWidget {
                 children: [
                   SizedBox(width: width / 48),
                   Padding(
-                    padding: const EdgeInsets.only(right: 12),
+                    padding: const EdgeInsets.only(right: 12, bottom: 6),
                     child: Image.asset(
                       "assets/icons/logo.png",
                       width: 28,
@@ -47,7 +47,7 @@ class SideMenu extends StatelessWidget {
               ),
             ],
           ),
-        Divider(color: background),
+        Divider(color: sidebar),
         Column(
           mainAxisSize: MainAxisSize.min,
           children: sideMenuItems
@@ -62,8 +62,8 @@ class SideMenu extends StatelessWidget {
                       menuController.changeActiveItemTo(itemName);
                       if (ResponsiveWidget.isSmallScreen(context)) {
                         Get.back();
-                        // TODO:: Go to item name Route
                       }
+                      navigationController.navigateTo(itemName);
                     }
                   }))
               .toList(),

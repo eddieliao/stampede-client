@@ -35,7 +35,7 @@ class VerticalMenuItem extends StatelessWidget {
                 maintainAnimation: true,
                 child: Container(
                   width: 3,
-                  height: 72,
+                  height: 88,
                   color: accent,
                 ),
               ),
@@ -62,7 +62,8 @@ class VerticalMenuItem extends StatelessWidget {
                         color: light,
                         size: 18,
                         weight: FontWeight.bold,
-                      ))
+                      )),
+                    const Padding(padding: EdgeInsets.only(bottom: 16)),
                   ],
                 ),
               ),
