@@ -1,6 +1,7 @@
+
 import 'package:flutter/material.dart';
 import 'package:stampede_client/constants/style.dart';
-import 'package:stampede_client/widgets/info_card.dart';
+import 'package:stampede_client/widgets/info_cards/info_card.dart';
 
 class OverviewCardsMediumScreen extends StatelessWidget {
   const OverviewCardsMediumScreen({super.key});

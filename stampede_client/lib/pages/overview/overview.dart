@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:stampede_client/helpers/responsiveness.dart';
-import 'package:stampede_client/widgets/overview_cards/overview_cards_large.dart';
-import 'package:stampede_client/widgets/overview_cards/overview_cards_medium.dart';
-import 'package:stampede_client/widgets/overview_cards/overview_cards_small.dart';
+import 'package:stampede_client/pages/overview/overview_cards/overview_cards_large.dart';
+import 'package:stampede_client/pages/overview/overview_cards/overview_cards_medium.dart';
+import 'package:stampede_client/pages/overview/overview_cards/overview_cards_small.dart';
 
 class OverviewPage extends StatelessWidget {
   const OverviewPage({super.key});

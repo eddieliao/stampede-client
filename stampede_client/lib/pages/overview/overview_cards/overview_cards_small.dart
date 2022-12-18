@@ -1,5 +1,6 @@
+
 import 'package:flutter/material.dart';
-import 'package:stampede_client/widgets/info_card_small.dart';
+import 'package:stampede_client/widgets/info_cards/info_card_small.dart';
 
 class OverviewCardsSmall extends StatelessWidget {
   const OverviewCardsSmall({super.key});
